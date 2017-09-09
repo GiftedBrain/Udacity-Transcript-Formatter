@@ -1,6 +1,6 @@
 import os
 
-inputDirectory = "C:/parsedTranscripts/"
+inputDirectory = "parsedTranscripts/"
 transcripts = []
 lessons = []
 
@@ -13,7 +13,7 @@ for lesson in lessons[0]:
             if f.endswith(".txt"):
                 transcripts.append(inputDirectory + lesson + "/" + f)
                 
-file = open("oneBigFile.txt", "w")
+file = open("parsedTranscripts/oneBigFile.txt", "w")
 for transcript in transcripts:
     source = open(transcript, "r")
     file.write("\n\n" + transcript.split("/")[-1].split(".")[0] + "\n")

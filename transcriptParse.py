@@ -33,7 +33,9 @@ def parseTranscript(inputLines, outputFile, justify = True, length = 105):
                 line = line[1:]
         line = line.replace(" >>", ">>")
         line.replace("  ", " ")
-        outputFile.write(line.encode('ascii', 'ignore'))
+        #ret = line.encode('ascii', 'ignore')
+        outputFile.write(line)
+        
 
 def leftJustify(text, lineLength):
     done = False
